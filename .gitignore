@@ -4,10 +4,9 @@ node_modules/
 **/node_modules/
 ComicRack-react/node_modules/
 
-# Specific content folders
-ComicRack-nodejs/manhua/
+# Specific content folders - keep the folder but ignore contents
 ComicRack-nodejs/manhua/*
-**/ComicRack-nodejs/manhua/
+!ComicRack-nodejs/manhua/.gitkeep
 
 # Build outputs
 /dist
