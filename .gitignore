@@ -5,9 +5,9 @@ node_modules/
 ComicRack-react/node_modules/
 
 # Specific content folders
-nodejs/manhua/
-nodejs/manhua/*
-**/nodejs/manhua/
+ComicRack-nodejs/manhua/
+ComicRack-nodejs/manhua/*
+**/ComicRack-nodejs/manhua/
 
 # Build outputs
 /dist
