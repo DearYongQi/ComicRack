@@ -1,0 +1,39 @@
+/* 全局主题变量 */
+:root {
+  --primary-color: #ff6b6b;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #e8e8e8;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+}
+
+/* 黑暗主题变量 */
+[data-theme="dark"] {
+  --primary-color: #ff6b6b;
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --border-color: #333333;
+  --card-bg: #1f1f1f;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 明亮主题样式类 */
+body.light-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* 黑暗主题样式类 */
+body.dark-mode {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all var(--transition-speed) ease;
+} 

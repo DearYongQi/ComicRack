@@ -1,0 +1,80 @@
+.comic-card {
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-color);
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .comic-cover {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    
+    @media (max-width: 768px) {
+      height: 220px;
+    }
+    
+    @media (max-width: 576px) {
+      height: 200px;
+    }
+    
+    img, .comic-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover img, &:hover .comic-image {
+      transform: scale(1.05);
+    }
+    
+    .favorite-button {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: var(--text-color);
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: scale(1.1);
+      }
+      
+      .filled {
+        color: var(--primary-color);
+      }
+    }
+  }
+  
+  .ant-card-body {
+    padding: 12px;
+  }
+  
+  .comic-title {
+    color: var(--text-color);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .ant-card-meta-description {
+    color: var(--text-color);
+    opacity: 0.7;
+  }
+} 

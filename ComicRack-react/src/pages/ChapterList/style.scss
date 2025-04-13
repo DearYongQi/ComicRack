@@ -1,0 +1,106 @@
+.chapter-list-container {
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+  
+  .chapter-list-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    
+    .back-button {
+      margin-right: 1rem;
+      color: var(--primary-color);
+      
+      &:hover {
+        color: var(--hover-color);
+      }
+    }
+    
+    h1 {
+      color: var(--text-color);
+      margin: 0;
+      font-size: 1.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    
+    p {
+      margin-top: 1rem;
+      color: var(--text-color);
+    }
+  }
+  
+  .chapter-content {
+    .comic-banner {
+      width: 100%;
+      height: 220px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: var(--card-shadow);
+      
+      @media (min-width: 768px) {
+        height: 300px;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    .chapter-card {
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      
+      &:hover {
+        transform: translateY(-5px);
+      }
+      
+      .chapter-card-content {
+        display: flex;
+        align-items: center;
+        
+        .chapter-icon {
+          font-size: 24px;
+          color: var(--primary-color);
+          margin-right: 12px;
+        }
+        
+        .chapter-info {
+          .chapter-name {
+            font-weight: 500;
+            color: var(--text-color);
+          }
+          
+          .chapter-pages {
+            font-size: 0.8rem;
+            color: var(--text-color);
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+} 
