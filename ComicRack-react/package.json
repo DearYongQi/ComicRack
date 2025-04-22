@@ -2,6 +2,7 @@
   "name": "comicrack-front",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:88",
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "antd": "^5.9.0",

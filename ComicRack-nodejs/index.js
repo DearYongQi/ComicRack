@@ -10,11 +10,14 @@ const path = require('path');
 const Datastore = require('nedb');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 88;
 
 // 中间件配置
 app.use(cors());
 app.use(express.json());
+
+// 提供静态HTML访问
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 漫画文件夹路径 - 改为应用根目录下
 const COMICS_DIR = path.join(__dirname, 'manhua');

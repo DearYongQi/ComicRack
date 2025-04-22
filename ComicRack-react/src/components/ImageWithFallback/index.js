@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BASE_URL } from '../../utils/api';
 import './style.scss';
 
 /**
@@ -33,7 +32,7 @@ const ImageWithFallback = ({
     
     // 确保路径以/开头
     const path = src.startsWith('/') ? src : `/${src}`;
-    return `${BASE_URL}${path}`;
+    return `${path}`;
   })();
   
   if (hasError) {
